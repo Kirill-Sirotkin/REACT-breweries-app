@@ -1,7 +1,8 @@
 import React from "react";
-import AppBarCustom from "../components/AppBarCustom";
 import Box from "@mui/material/Box";
 import { Outlet } from "react-router";
+
+import AppBarCustom from "../components/AppBarCustom";
 
 const Navigation = () => {
     return (

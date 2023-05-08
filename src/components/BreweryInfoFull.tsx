@@ -1,9 +1,10 @@
 import React, { useEffect, useState } from "react";
-import { BreweryFetch } from "../types/breweryFetch";
 import { useParams } from "react-router";
 import Container from "@mui/material/Container";
 import Typography from "@mui/material/Typography";
 import Button from "@mui/material/Button";
+
+import { BreweryFetch } from "../types/breweryFetch";
 
 const BreweryInfoFull = () => {
     const {id} = useParams();

@@ -1,4 +1,4 @@
-import React from "react";
+import React, { FormEvent, useState } from "react";
 import AppBar from "@mui/material/AppBar";
 import SportsBarIcon from '@mui/icons-material/SportsBar';
 import Box from "@mui/material/Box";
@@ -7,7 +7,9 @@ import Toolbar from "@mui/material/Toolbar";
 import InputBase from "@mui/material/InputBase";
 import SearchIcon from '@mui/icons-material/Search';
 import Typography from "@mui/material/Typography";
-import { Link } from "react-router-dom";
+import { Link, useNavigate } from "react-router-dom";
+import Button from "@mui/material/Button";
+import ArrowForward from "@mui/icons-material/ArrowForward";
 
 const Search = styled('div')(({ theme }) => ({
     position: 'relative',
@@ -51,6 +53,15 @@ const Search = styled('div')(({ theme }) => ({
   }));
 
 const AppBarCustom = () => {
+    const [searchItem, setSearchItem] = useState<string>("");
+    const navigate = useNavigate();
+
+    const searchBrewery = (e: FormEvent<HTMLFormElement>) => {
+      e.preventDefault();
+      if (!searchItem) return;
+      navigate(`/search/${searchItem}`);
+    }
+
     return (
       <Box sx={{ flexGrow: 1 }}>
         <AppBar position="static" sx={{ bgcolor: "#282c34" }}>
@@ -76,13 +87,19 @@ const AppBarCustom = () => {
               </Typography>
             </Toolbar>
             <Search>
+              <form onSubmit={(e)=> searchBrewery(e)}>
                 <SearchIconWrapper>
                     <SearchIcon />
                 </SearchIconWrapper>
                 <StyledInputBase
                     placeholder="Search…"
                     inputProps={{ 'aria-label': 'search' }}
+                    onChange={(e)=> setSearchItem(e.target.value)}
                 />
+                <Button type="submit" sx={{color: "white", height: "100%", padding: "0 0 2px 0", margin: 0}}>
+                  <ArrowForward />
+                </Button>
+              </form>
             </Search>
           </Toolbar>
         </AppBar>

@@ -1,6 +1,7 @@
 import React from "react";
-import FeaturedBreweriesBoard from "../components/FeaturedBreweriesBoard";
 import Box from "@mui/material/Box";
+
+import FeaturedBreweriesBoard from "../components/FeaturedBreweriesBoard";
 
 const Home = () => {
     return (

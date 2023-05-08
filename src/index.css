@@ -14,9 +14,8 @@ body {
   );
   color: beige;
   height: 100vh;
-  width: 100vw;
+  width: 100%;
   box-sizing: border-box;
-  padding: 2em;
 }
 
 code {
