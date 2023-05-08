@@ -7,7 +7,7 @@ import Toolbar from "@mui/material/Toolbar";
 import InputBase from "@mui/material/InputBase";
 import SearchIcon from '@mui/icons-material/Search';
 import Typography from "@mui/material/Typography";
-
+import { Link } from "react-router-dom";
 
 const Search = styled('div')(({ theme }) => ({
     position: 'relative',
@@ -60,8 +60,8 @@ const AppBarCustom = () => {
               <Typography
                 variant="h6"
                 noWrap
-                component="a"
-                href="/"
+                component={Link}
+                to={"/"}
                 sx={{
                   mr: 2,
                   display: { xs: 'none', md: 'flex' },

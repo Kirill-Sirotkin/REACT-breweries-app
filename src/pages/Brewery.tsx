@@ -1,8 +1,9 @@
 import React from "react";
+import BreweryInfoFull from "../components/BreweryInfoFull";
 
 const Brewery = () => {
     return (
-        <div>Brewery!</div>
+        <BreweryInfoFull />
     )
 }
 

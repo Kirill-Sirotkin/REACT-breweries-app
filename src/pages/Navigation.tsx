@@ -3,14 +3,13 @@ import AppBarCustom from "../components/AppBarCustom";
 import Box from "@mui/material/Box";
 import { Outlet } from "react-router";
 
-const NotFound = () => {
+const Navigation = () => {
     return (
         <Box>
-            <AppBarCustom></AppBarCustom>
-            <Outlet></Outlet>
-            <div>Whoops! Page not found.</div>
+            <AppBarCustom />
+            <Outlet />
         </Box>
     )
 }
 
-export default NotFound;
+export default Navigation;

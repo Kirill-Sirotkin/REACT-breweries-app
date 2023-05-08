@@ -1,13 +1,12 @@
 import React from "react";
-import { Outlet } from "react-router";
-import AppBarCustom from "../components/AppBarCustom";
+import FeaturedBreweriesBoard from "../components/FeaturedBreweriesBoard";
+import Box from "@mui/material/Box";
 
 const Home = () => {
     return (
-        <div>
-            <AppBarCustom />
-            <Outlet />
-        </div>
+        <Box>
+            <FeaturedBreweriesBoard />
+        </Box>
     )
 }
 
