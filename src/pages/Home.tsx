@@ -1,10 +1,11 @@
 import React from "react";
 import { Outlet } from "react-router";
+import AppBarCustom from "../components/AppBarCustom";
 
 const Home = () => {
     return (
         <div>
-            Home
+            <AppBarCustom />
             <Outlet />
         </div>
     )
