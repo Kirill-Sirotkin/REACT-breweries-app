@@ -2,6 +2,10 @@
 
 Fetch, display, and search for brewery companies from the given API endpoint, using React and TypeScript
 
+## Visit the deployed page
+
+https://chimerical-scone-8103ce.netlify.app/
+
 ## Requirements
 
 1. Check the documentation at [https://www.openbrewerydb.org/documentation](https://www.openbrewerydb.org/documentation) Fetch and display information of all the companies.
@@ -20,6 +24,6 @@ Fetch, display, and search for brewery companies from the given API endpoint, us
 
 7. Use the queries listed in the documentation to sort and limit the returned data and build pagination feature.
 
-8. Create a contact form so that user can send question along with their contact information. 
+8. Create a contact form so that user can send question along with their contact information.
 
 9. Use Google-login option to pre-fill the contact form for user.
